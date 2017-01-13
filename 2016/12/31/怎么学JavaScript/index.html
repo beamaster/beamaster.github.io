@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Title -->
+    
+    <title>
+        怎么学JavaScript | 让正确的事情持续发生——永远年轻，永远热泪盈眶
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & INfo -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Steam">
+    <meta name="description" content="Steam&#39;s Blog">
+    <meta name="keywords" content="null">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="让正确的事情持续发生——永远年轻，永远热泪盈眶">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://beamaster.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="怎么学JavaScript | 让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta property="og:description" content="Steam&#39;s Blog">
+    <!-- <script>
+    (function(){
+      if('{{ page.password }}'){
+        if (prompt('请输入文章密码','') !== '{{ page.password }}'){
+          alert('密码错误！');
+          history.back();
+        }
+      }
+    })();
+    </script> -->
+
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+	body, html{
+		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	}
+	
+    a{
+        color: #00838F
+    }
+    
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important
+    }
+    
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: #0097A7 !important
+    }
+    
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: #0097A7 !important
+    }
+    
+    .toTop{
+        background: #757575 !important
+    }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: #757575;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: #757575;
+	}
+
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: #757575;
+	}
+	
+	.post-toc a:hover{
+		color: #00838F;
+		text-decoration: underline;
+	}
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+	<script src="/js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="/css/highlight/solarized-white.css">
+
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<link rel="stylesheet" href="/css/uc.css">');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+
+
+  <!-- 文章加密 设置-->
+
+    <!-- Custom Head -->
+    
+</head>
+
+	
+	
+
+    <body id="scheme-Paradox">
+
+		
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			
+			
+            <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+				
+                <!-- Top Anchor -->
+                <div id="top"></div>
+				
+				
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+				
+				
+                <!-- Post TOC -->
+
+    
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前端网老姚浅谈：怎么学JavaScript？"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端网老姚浅谈：怎么学JavaScript？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第一个问题是，看书有啥好处？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">第一个问题是，看书有啥好处？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第二个问题是，书籍推荐。"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">第二个问题是，书籍推荐。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三个问题，怎么看。"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">第三个问题，怎么看。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第四个问题，看书的层次问题。"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">第四个问题，看书的层次问题。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#这里再说说几个事情。"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">这里再说说几个事情。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-有人问我前端工作经验事情。"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">1.有人问我前端工作经验事情。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-初学者或新手（beginner）怎么办？"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">2.初学者或新手（beginner）怎么办？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-看书和分析源码的时机"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">3.看书和分析源码的时机</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-没有时间去学习？"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">4.没有时间去学习？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-兴趣问题？"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">5.兴趣问题？</span></a></li></ol></li></ol></li></ol>
+		
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
+	
+		<!-- Custom Thumbnail -->
+		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/images/sight/ice_river.jpg)">
+	
+        <p class="article-headline-p">
+            怎么学JavaScript
+        </p>
+    </div>
+
+	
+
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Steam</strong>
+        <span>12月 31, 2016</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+
+    <!-- Qrcode -->
+    
+
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/JavaScript-前端/">JavaScript,前端</a>
+    </ul>
+    
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+
+    
+
+    
+    <!-- Busuanzi Views -->
+    <a class="post_share-link" href="#">
+        <li class="mdl-menu__item">
+            <span id="busuanzi_container_page_pv">
+                <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+            </span>
+        </li>
+    </a>
+    
+
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=怎么学JavaScript&url=http://beamaster.github.io//2016/12/31/怎么学JavaScript/index.html&via=Steam" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://beamaster.github.io//2016/12/31/怎么学JavaScript/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=怎么学JavaScript&url=http://beamaster.github.io//2016/12/31/怎么学JavaScript/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+
+    <!-- Share LinkedIn -->
+    <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://beamaster.github.io//2016/12/31/怎么学JavaScript/index.html&title=怎么学JavaScript" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 LinkedIn
+        </li>
+    </a>
+
+    <!-- Share QQ -->
+    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=让正确的事情持续发生——永远年轻，永远热泪盈眶&title=怎么学JavaScript&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2016/12/31/怎么学JavaScript/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 QQ
+        </li>
+    </a>
+
+    <!-- Share Telegram -->
+    <a class="post_share-link" href="https://telegram.me/share/url?url=http://beamaster.github.io/2016/12/31/怎么学JavaScript/index.html&text=怎么学JavaScript" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Telegram
+        </li>
+    </a>
+</ul>
+
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<blockquote>
+<p>本文转自：<a href="http://www.qdfuns.com/notes/17398/d3f6dd40e2d3ff15b209810dfa98be0b:storey-71.html" target="_blank" rel="external">前端网@老姚</a></p>
+</blockquote>
+<h1 id="前端网老姚浅谈：怎么学JavaScript？"><a href="#前端网老姚浅谈：怎么学JavaScript？" class="headerlink" title="前端网老姚浅谈：怎么学JavaScript？"></a>前端网老姚浅谈：怎么学JavaScript？</h1><p>鉴于时不时，有同学私信问我怎么学前端的问题。<br>这里统一回复一下，如下次再遇到问我此问题同学，就直接把本文链接地址发给你了。</p>
+<p>首先说句题外话。关于有人管我叫大神的事情。<br>个人感觉这跟你买东西时，人家管你叫帅哥一样，你答应与否都无妨。</p>
+<p>正题开始，前端怎么学，应该因人而异，别人的方法未必适合自己。<br>就说说我的学习方法吧。<br>我把大部分时间放在学习js上了。因为这个js的学习曲线，先平后陡。<br>项目实践和练习啥的，我不说了，主要说下工作之外的时间利用问题。<br>我是怎么学的呢，<code>看书，分析源码</code>。<br>个人这几天统计了一下，前端书籍目前看了50多本吧。大部分都是js的。市面上的书基本，差不多都看过。</p>
+<hr>
+<h2 id="第一个问题是，看书有啥好处？"><a href="#第一个问题是，看书有啥好处？" class="headerlink" title="第一个问题是，看书有啥好处？"></a>第一个问题是，看书有啥好处？</h2><p>好处应该是不言而明的，书看多了，基础会逐渐夯实起来。<br>看多了，自己的判断力，自然就上来了。<br>看别人的文章，就能很快判断出，对方每块儿讲得对不对，哪块儿又是自己不清楚的，模棱两可的。<br>当然也为看源码，分析源码提供了基础。</p>
+<p><strong>10本书读2遍的好处，应该大于一本书读20遍。</strong><br>10本书的交集，那就是基础知识的核心，而并集那就是所有的知识。<br>好书当然要多读，反复读。但是只读一本是不行的。<br>因为每本书的侧重点都不一样。从不同的侧面，去理解一个知识点，是很有意义的。<br>所以特别佩服印度人，他跟你讲英文，你一个词语没听懂，他会蹦出n个同一意思的单词，你听懂一个，就ok了。<br>看书也是这样的，某一块讲得不透彻，不用担心，其他书籍可以帮助你来了解。</p>
+<hr>
+<h2 id="第二个问题是，书籍推荐。"><a href="#第二个问题是，书籍推荐。" class="headerlink" title="第二个问题是，书籍推荐。"></a>第二个问题是，书籍推荐。</h2><p>个人觉得不错的，没事可以翻翻的。书籍如下：</p>
+<p><strong>《javascript面向对象编程指南》</strong>，风格轻松易懂，比较适合初学者，原型那块儿讲得透彻，12种继承方式呢。<br><strong>《js权威指南》</strong>、<code>《js高级程序设计》</code>，这两本书经典是经典，但是太厚，适合把其中任意一章都当成一本书来读。洋洋洒洒，很难一口气看完。比较适合当做参考书。<br><strong>《你不知道的javascript》</strong>，狙击js核心细节，闭包、原型、this讲得都还清楚。目前《中册》也出了，还在看。<br><strong>《js设计模式与开发实践》</strong> js设计模式也是要学的，此书把js的设计模式讲得非常清晰，一点不晦涩，看起来没多少难度。<br><strong>《正则指引》</strong>，分析源码时，如果正则表达式不懂，没法进行下去的。此书相对来说讲得比较清晰。<br><strong>《基于MVC的JavaScript Web富应用开发》</strong>，看完后，基本能写出自己的mvc框架了。是本好书。<br><strong>《javascript函数式编程》</strong>，js是一门函数式语言，此书是函数式编程一个入门，函数是一等公民那是非常重要的。<br><strong>《js忍者秘籍》</strong>，jq作者写的，没有传说中的那么难读，话说就算你看完并理解所有知识点，也不会达到世界高手级别的。因为你还没有做到随心所欲。<code>《javascript框架设计》</code>，如果初看此书，会觉得此书有罗列代码之嫌。在我看来，此书讲究的是框架的全局观。<br>以上书籍是我认为是成就高手之路上必须看的，也需要反复看。</p>
+<p>css相关的书籍，说实话我看得比较少，总共有六七本吧。有两本必须推荐一下：<strong>《css权威指南》</strong>，css基础知识点那是讲得非常清楚的。什么层叠优先级、<code>line-height</code>啥的。不是随便一本书都敢叫“权威指南”的。<code>《css揭秘》</code>此书我也是不断的看，此书才不屑于全面讲css3各属性呢。css规范文档能讲的，它只会讲你最不在意的。此书解决的47问题，解决思路和解决方案同等重要，很有启发性。以上各书你都可以不买，至少买本此书吧。</p>
+<hr>
+<h3 id="第三个问题，怎么看。"><a href="#第三个问题，怎么看。" class="headerlink" title="第三个问题，怎么看。"></a>第三个问题，怎么看。</h3><p>想必很多同学，都想看书，但是很难看下去。<br>文字部分相对来说还能看看，一遇到代码，头皮就发麻了。<br>此问题一开始时我也遇到的。</p>
+<p>说一个学习理论。<br>比如说学英语，有个开水理论。<br>词汇量必须达到6000才行，如果没达到，英文水平不会上去的，<br>这跟烧开水一样，没事烧烧，放着凉凉，从来没烧到100度，那么此水是永远不能喝的。<br>一旦煮沸过，就可以随时喝了。</p>
+<p>20本书你看不下去，说明什么呢？<br>任何一本书，你都没看完过。熟悉的，永远只是前三章。别笑，我原先也是这样的。<br>那么现在的问题是，怎么把一本书看完呢？<br><strong>很简单，敲。</strong></p>
+<p><strong><code>《基于MVC的JavaScript Web富应用开发》</code></strong>这本书我看时，就是这样，终于有一天，我下定决心要把此书从头到尾敲一遍。<br>文字加代码都敲，然后就一章一章得看完了。代码敲一遍后，你会发现，没之前看起来的那么难。<br>如果你属于一看书就犯困那种同学。强烈建议你把<code>《javascript面向对象编程指南》</code>此书从头到尾敲一遍。<br>坚持看完一本书后，信心就上来了。先保证看完一本再说。看完3本后，基本应该能做到几天就能看一本了。万事开头难，加油吧。</p>
+<hr>
+<h2 id="第四个问题，看书的层次问题。"><a href="#第四个问题，看书的层次问题。" class="headerlink" title="第四个问题，看书的层次问题。"></a>第四个问题，看书的层次问题。</h2><p><strong>书看完后，要自己总结</strong>，要与其他书籍对比看。有同学同时对比着看<code>《权威指南》</code>和<code>《高设》</code>来的。<br>随便拿出个知识点，你都能闭着眼睛说得头头是道，说明水平够了。</p>
+<p>下一块就是源码的学习了。<br>看框架源码之前，想说一件事情：<code>dom</code>的<code>api</code>不懂，没问题，你可以百度。但是<strong>正则</strong>一定要先研究研究。<br>不然大多数人去尝试分析源码时，遇到的挫折都在于此。</p>
+<p>怎么去阅读源码呢？<br><strong>敲，照着敲</strong>。</p>
+<p>有哪些代码值得去敲呢？<br>优秀框架或者库的源码都值得你去敲。<br>但是拿<code>jquery</code>来敲，来入门，那不行的。原因：太他么长了。八九千行呢！！</p>
+<p>个人觉得<code>underscore.js</code>库是不错的第一个选择。原因都是工具方法，敲完以后自己的水平应该略有小成吧。<br>其实有一些api的实现，你要把它当成<code>getElementById</code>一样，深深的印在脑海里。比如<code>extend</code>方法，必须张口就来。<br>敲完<code>underscore</code>库后，可以考虑去看看<code>《javascript函数式编程》</code>这本书了。</p>
+<p>jquery的源码不好敲。那么<code>zepto</code>的源码比较少1800多行，敲一天应该敲完了。<br>敲几遍后，把所有不懂的地方，都百度清楚，然后就可以写自己的类<code>jquery</code>的库了。<br>然后就可以作为一项技能写进自己的简历里。比如“创建过自己的<code>jquery</code>库”。<br>当然敲的过程，还能帮助自己对<code>jquery</code>的<code>api</code>认识。</p>
+<p>然后是<code>backbone.js</code>，因为此框架是以类jq和underscore为基础的mvc框架。代码也没多少行。敲吧。<br><code>spine.js</code>与<code>backbone</code>类似。可以在敲其之前，先看看那本<code>《基于MVC的JavaScript Web富应用开发》</code>。<br>希望你的简历可以添加这么一笔，“创建过自己的mvc框架”。</p>
+<p>其他的，我也敲过一些。包括<code>jq.validate.js</code>，包括一些插件。<br>如果你愿意的话，<code>bootstrap</code>你可以去敲敲啊。源码挺多的，可以按插件逐个来敲。<br>分析明白了，轮播、分页、下拉框等等的插件那还不是分分钟随手就写一个了。<br>最起码看看人家api接口是怎么设计的也是极好的。话说个人在阅读其<code>css</code>代码中，也学到了不少东西。<br>说到插件，有两个必须提提，一个是表格插件，一个是树。都敲完，简历里可以这么写上，“创建过自己的UI框架”。</p>
+<p>当然了，你也可以敲你喜欢的框架代码，重要的是明白其实现原理，最好理解其为啥那么设计，如果对设计模式比较熟悉的话，会经常发现原来是这么回事。。。<br>照着敲只是分析源码的入门，用途也是为了学习，最后能用在自己的项目中，那是才是正道。<br>就算没啥用，也是打发时间的好方式，比看电视剧强多了。我闲着无聊时，就背着敲<code>underscore</code>源码。。。</p>
+<p>最后说句，如果你简历上能如期写上那几句话后，必须是大神。加油吧。</p>
+<p>后记：写本文的最初目的，正如文章开头说的那样，方便自己回复大家的提问。<br>本站的任何一篇分享学习经验的文章，基本都会引起共鸣，这确实是一个值得讨论的话题。</p>
+<h2 id="这里再说说几个事情。"><a href="#这里再说说几个事情。" class="headerlink" title="这里再说说几个事情。"></a>这里再说说几个事情。</h2><h3 id="1-有人问我前端工作经验事情。"><a href="#1-有人问我前端工作经验事情。" class="headerlink" title="1.有人问我前端工作经验事情。"></a>1.有人问我前端工作经验事情。</h3><p>没几年。三年多。</p>
+<h3 id="2-初学者或新手（beginner）怎么办？"><a href="#2-初学者或新手（beginner）怎么办？" class="headerlink" title="2.初学者或新手（beginner）怎么办？"></a>2.初学者或新手（beginner）怎么办？</h3><p>看书和分析源码是重要的提高方式，但不适合新手。<br>新手需要的是能快速的入门和入行，能快速的上手工作。<br>一种快捷的学习方式就是看视频。正如有的同学说得那样，知道有哪些东西，怎么用就可以了。</p>
+<p>看视频是有好处的，首先它是一种被动学习方式。<br>我最开始的入门也是看视频来的，只需要看就行了。<br>一遍没懂，再放一遍，我基本上是1.5倍数去看的。<br>而读书是一种主动方式，需要自己一页一页翻。需要自己主动的去理解。<br>而很多东西，也许只是视频老师一句话，就能突出的重点，需要我们自己去解读。<br>还有另一件事情是，比如发现自己某个知识点不太清楚，可以单独去百度。<br>比如this，文章很多的。这种学习方式也是快速掌握知识点的好办法。</p>
+<p>书籍需要技术评审，那么看文章一定要看看评论。不过视频就不好说了，视频一般都不会讲得太深入，偶尔也有讲错的。<br>当年我也曾被一些视频误导过，建议找不错的视频看看。各大网站培训机构的免费视频挺多的。</p>
+<h3 id="3-看书和分析源码的时机"><a href="#3-看书和分析源码的时机" class="headerlink" title="3.看书和分析源码的时机"></a>3.看书和分析源码的时机</h3><p>但已经工作一年半载时，正是提高的好时候，此时可以去看书了。全面系统的梳理知识点，扫清自己的盲区。<br>如果只是靠项目经验是不够的，通过项目来学习，那肯定是必须的，工作本身就是一个学习的过程。<br>但是工作三年不看书的话，学又能学到多少呢？更何况每个项目都很类似，一直处在舒适区，那真就是5年经验重复第一年的了。<br>所以我不认同这句话：面试时强调自己的学习能力是工作能力不强的表现。<br>3年经验的水平，完全有可能超过5年的。</p>
+<h3 id="4-没有时间去学习？"><a href="#4-没有时间去学习？" class="headerlink" title="4.没有时间去学习？"></a>4.没有时间去学习？</h3><p>如果你还没毕业，就已经天天在本站混了。其实你领先了一大步。<br>都是混过大学的。天天充斥着lol和电视剧的陪伴，我只想说进入社会是要还的。<br>最可怕的是什么呢？该还、还不还（这几个字别念错了）。<strong>时间是有的，就看你愿意付出不</strong>。<br>下班后学习，周末学习，节假日别人玩的时候，在家敲代码。这样才能领先别人。</p>
+<h3 id="5-兴趣问题？"><a href="#5-兴趣问题？" class="headerlink" title="5.兴趣问题？"></a>5.兴趣问题？</h3><p>兴趣和擅长是一个良性迭代循环。你擅长某件事情，就会越喜欢它，越喜欢，就越愿意花时间，进而越擅长。<br>此道理都懂，只是缺乏一个trigger。如果你喜欢玩游戏的话，其实你可能非常适合做前端。<br>玩游戏就是一个反馈机制，前端工作的反馈，相对其他工作来说也是非常及时的。代码一改，网页一刷，就看到效果了。<br>擅长、优越感、成就感通常都是连在一起的。每看完一本书，我都觉得很有成就感。每敲完一个库，也有成就感。</p>
+<p>以上纯属一家之言，每个人的学习习惯、方式、态度都不一样。先端正态度、找到自己的学习方法，进而养成坚持下去的习惯。<br>最后说一句，你我共勉：只要你走在正确的道路上，不管、走得多慢，都是前进！</p>
+<p>本文完。</p>
+<blockquote>
+<p>未经作者授权，如有冒犯，请留言</p>
+</blockquote>
+
+	
+	
+	
+	
+</div>
+				
+				
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+            data-thread-key="2016/12/31/怎么学JavaScript/" 
+            data-url="http://beamaster.github.io/2016/12/31/怎么学JavaScript/"
+            data-title="怎么学JavaScript"></div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+        <a href="/2016/12/31/三大框架之struts2/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            后一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/12/29/在hexo-中无痛使用本地图片/" id="post_nav-older" class="next-content">
+            前一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
+
+				
+				
+					<!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay "></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+	<div id="sidebar-main">
+	    <!-- Sidebar Header -->
+		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Steam's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        steamshi@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+		<!-- Sidebar Navigation  -->
+		<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+			
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+<!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+-->
+
+	
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
+        </ul>
+    </li>
+	
+    <!-- Categories  -->
+<!--
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">view_list</i>
+             分类
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            
+        </ul>
+    </li>
+-->
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+	
+		<li>
+			<a href="/about" title="about">
+				about
+			</a>
+		</li>
+	
+		<li>
+			<a href="/friends" title="friends">
+				friends
+			</a>
+		</li>
+	
+		<li>
+			<a href="/favorite" title="favorite">
+				favorite
+			</a>
+		</li>
+	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+             文章总数
+             <span class="sidebar-badge">16</span>
+        </a>
+    </li>
+</ul>
+
+		<!-- Sidebar Divider -->
+		<div class="sidebar-divider"></div>
+
+		<!-- Sidebar Footer -->
+		<!-- 
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持。 :) 
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		主题 - Material
+		<span class="sidebar-badge badge-circle">i</span>
+	</div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		sidebar.help
+		<span class="mdl-button__ripple-container">
+			<span class="mdl-ripple"></span>
+		</span>
+	</div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+	</div>
+    
+    <!-- Sidebar Sponsor -->
+    
+
+
+</aside>
+
+				
+				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+				
+				
+				<!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+	
+	
+		<!-- Paradox Footer Left Section -->
+		<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+    
+
+    <!-- Facebook -->
+    
+    
+
+    <!-- Google + -->
+    
+    
+
+    <!-- Weibo -->
+    
+    <a href="http://weibo.com/steamQ/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+        <span class="visuallyhidden">Weibo</span>
+    </button></a>
+    
+
+    <!-- Instagram -->
+    
+    
+
+    <!-- Tumblr -->
+    
+    
+
+    <!-- Github -->
+    
+    <a href="https://github.com/beamaster" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+        <span class="visuallyhidden">Github</span>
+    </button></a>
+    
+
+    <!-- LinkedIn -->
+    
+    
+</div>
+
+
+		<!--Copyright-->
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;让正确的事情持续发生——永远年轻，永远热泪盈眶</div>
+
+		<!-- Paradox Footer Right Section -->
+
+		<!-- 
+		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+		It will not impact the appearance and can give developers a lot of support :)
+
+		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+		它不会影响美观并可以给开发者很大的支持。 :) 
+		-->
+
+		<div class="mdl-mini-footer--right-section">
+			<div>
+				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+			</div>
+		</div>
+	
+    
+</footer>
+                
+				<!-- Import File -->
+<script src="/js/highlight.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    <!-- 多说公共 js 代码 start -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"forsigner"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'https://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共 js 代码 end -->
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+	<script>
+	var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length <= 0) {
+                    return;
+                }
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ data_title;
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out characters
+                            var start = first_occur - 6;
+                            var end = first_occur + 6;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 10;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substr(start, end); 
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<em class=\"search-keyword\">"+keyword+"</em>");
+                            })
+                            str += "<p class=\"search-result\">" + match_content +"...</p>" +"</a>";
+                        }
+                    }
+                })
+                $resultContent.innerHTML = str;
+            })
+        }
+    })
+}
+</script>
+
+	<script>
+        var inputArea = document.querySelector("#search");
+        var getSearchFile = function(){
+            var path = "search.xml";
+            searchFunc(path, 'search', 'local-search-result');
+        }
+
+        inputArea.onfocus = function(){ getSearchFile() }
+	</script>
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>
+
+<!-- MathJax Load-->
+
+            </main>
+        </div>
+		
+    </body>
+		
+	
+</html>
