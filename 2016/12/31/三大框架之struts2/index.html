@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        三大框架之struts2 | 让正确的事情持续发生——永远年轻，永远热泪盈眶
+        三大框架之struts2 | 开启单线程模式！
     </title>
 
     <!-- Favicons -->
@@ -35,23 +35,14 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta name="apple-mobile-web-app-title" content="开启单线程模式！">
 
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://beamaster.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="三大框架之struts2 | 让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta property="og:title" content="三大框架之struts2 | 开启单线程模式！">
     <meta property="og:description" content="Steam&#39;s Blog">
-    <!-- <script>
-    (function(){
-      if('{{ page.password }}'){
-        if (prompt('请输入文章密码','') !== '{{ page.password }}'){
-          alert('密码错误！');
-          history.back();
-        }
-      }
-    })();
-    </script> -->
+
 
      <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -177,9 +168,6 @@
 		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
 		}
 	</script>
-
-
-  <!-- 文章加密 设置-->
 
     <!-- Custom Head -->
     
@@ -350,7 +338,7 @@
     </a>
 
     <!-- Share QQ -->
-    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=让正确的事情持续发生——永远年轻，永远热泪盈眶&title=三大框架之struts2&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2016/12/31/三大框架之struts2/index.html" target="_blank">
+    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=开启单线程模式！&title=三大框架之struts2&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2016/12/31/三大框架之struts2/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 QQ
         </li>
@@ -370,7 +358,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<h1 id="一、三大框架之struts2"><a href="#一、三大框架之struts2" class="headerlink" title="一、三大框架之struts2"></a>一、三大框架之struts2</h1><h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p>先看图<br><img src="三大框架之struts2/dispatcher.png" alt="过滤器-拦截器"></p>
+		<h1 id="一、三大框架之struts2"><a href="#一、三大框架之struts2" class="headerlink" title="一、三大框架之struts2"></a>一、三大框架之struts2</h1><h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p><img src="/2016/12/31/三大框架之struts2/beautylife/zyg2.jpg" alt="bot"><br>先看图<br><img src="/2016/12/31/三大框架之struts2/dispatcher.png" alt="过滤器-拦截器"></p>
 <h3 id="servlet与action的区别"><a href="#servlet与action的区别" class="headerlink" title="servlet与action的区别"></a>servlet与action的区别</h3><ul>
 <li>servlet默认第一次访问的时候创建，只创建一次，属于单实例对象；</li>
 <li>action则是每次访问（调用）的时候创建，每访问（调用）一次创建一次，属于多实例对象</li>
@@ -380,8 +368,8 @@
 <li>拦截器(interceptor)<br>在action对象创建之后执行，所以只能拦截action内容</li>
 </ul>
 <h3 id="自定义拦截器"><a href="#自定义拦截器" class="headerlink" title="自定义拦截器"></a>自定义拦截器</h3><ul>
-<li>1.实现原理<br>是原理也是最原始的实现方式，方法一<br><img src="三大框架之struts2/personal_dispatcher.png" alt="自定义拦截器"></li>
-<li>2.常用实现方法<br>方法二<br><img src="三大框架之struts2/method_dispatcher.png" alt="自定义拦截器"></li>
+<li>1.实现原理<br>是原理也是最原始的实现方式，方法一<br><img src="/2016/12/31/三大框架之struts2/personal_dispatcher.png" alt="自定义拦截器"></li>
+<li>2.常用实现方法<br>方法二<br><img src="/2016/12/31/三大框架之struts2/method_dispatcher.png" alt="自定义拦截器"></li>
 </ul>
 <h1 id="二、三大框架之hibernate"><a href="#二、三大框架之hibernate" class="headerlink" title="二、三大框架之hibernate"></a>二、三大框架之hibernate</h1><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>工作原理：<br>1.通过Configuration().configure()读取并解析hibernate.cfg.xml配置文件<br>2.由hibernate,cfg.xml中的<mapping resource="con/xx/xx.hbm.xml">读取解析映射关系<br>3.通过config.buildSessionFactory()创建sessionFactory<br>4.sessionFactory.openSession()打开Session<br>5.session.beginTransaction 创建事物Transaction<br>6.persistent operate 持久化操作<br>7.session.getTransaction().commit() 提交事物<br>8.关闭session 和sessionFactory</mapping></p>
 <p>Hibernate ：Hibernate 是当前最流行的ORM框架，对数据库结构提供了较为完整的封装。它对jdbc进行了封装,在分层结构中处于持久化层,它能建立面向对象的域模型和关系数据模型之间的映射.它大大简化了dao层的编码工作</p>
@@ -403,10 +391,27 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Dao</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">(String name)</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DaoImpl</span> <span class="keyword">implements</span> <span class="title">Dao</span></span>&#123;</div><div class="line">  <span class="keyword">private</span> String name;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">(String name)</span></span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 	
+
 	
-	
-	
+
 </div>
+<!-- 
+<script>
+	(function(){
+		if('{{ page.password }}'){
+			if(sessionStorage.getItem(location.pathname) !== 'password'){
+				var password = prompt('请输入文章密码');
+				if (password === '{{ page.password }}'){
+					sessionStorage.setItem(location.pathname, password);
+				}else{
+					alert('密码错误！');
+					history.back();
+				}
+			}
+		}
+	})();
+</script> -->
+
 				
 				
 
@@ -434,6 +439,7 @@
             data-title="三大框架之struts2"></div>
     <!-- 多说评论框 end -->
 </div>
+
 
 
 
@@ -545,7 +551,7 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
+            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
         </ul>
     </li>
 	
@@ -588,12 +594,18 @@
 			</a>
 		</li>
 	
+		<li>
+			<a href="/signature" title="signature">
+				signature
+			</a>
+		</li>
+	
 
     <!-- Article Numebr  -->
     <li>
         <a href="/archives">
              文章总数
-             <span class="sidebar-badge">16</span>
+             <span class="sidebar-badge">23</span>
         </a>
     </li>
 </ul>
@@ -715,7 +727,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;让正确的事情持续发生——永远年轻，永远热泪盈眶</div>
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;开启单线程模式！</div>
 
 		<!-- Paradox Footer Right Section -->
 
@@ -901,7 +913,9 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 </script>
 
+
 <!-- MathJax Load-->
+
 
             </main>
         </div>

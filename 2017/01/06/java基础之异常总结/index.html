@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        java基础之异常总结 | 让正确的事情持续发生——永远年轻，永远热泪盈眶
+        java基础之异常总结 | 开启单线程模式！
     </title>
 
     <!-- Favicons -->
@@ -35,23 +35,14 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta name="apple-mobile-web-app-title" content="开启单线程模式！">
 
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://beamaster.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="java基础之异常总结 | 让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta property="og:title" content="java基础之异常总结 | 开启单线程模式！">
     <meta property="og:description" content="Steam&#39;s Blog">
-    <!-- <script>
-    (function(){
-      if('{{ page.password }}'){
-        if (prompt('请输入文章密码','') !== '{{ page.password }}'){
-          alert('密码错误！');
-          history.back();
-        }
-      }
-    })();
-    </script> -->
+
 
      <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -177,9 +168,6 @@
 		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
 		}
 	</script>
-
-
-  <!-- 文章加密 设置-->
 
     <!-- Custom Head -->
     
@@ -350,7 +338,7 @@
     </a>
 
     <!-- Share QQ -->
-    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=让正确的事情持续发生——永远年轻，永远热泪盈眶&title=java基础之异常总结&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2017/01/06/java基础之异常总结/index.html" target="_blank">
+    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=开启单线程模式！&title=java基础之异常总结&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2017/01/06/java基础之异常总结/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 QQ
         </li>
@@ -372,10 +360,27 @@
 	
 		<h1 id="java基础之异常总结"><a href="#java基础之异常总结" class="headerlink" title="java基础之异常总结"></a>java基础之异常总结</h1><h2 id="一-数组类"><a href="#一-数组类" class="headerlink" title="一.数组类"></a>一.数组类</h2><h3 id="1-NullPointerException-空指针异常"><a href="#1-NullPointerException-空指针异常" class="headerlink" title="1.NullPointerException  空指针异常"></a>1.NullPointerException  空指针异常</h3><h3 id="2-ArrayIndexOutofBoundsException-数组越界异常"><a href="#2-ArrayIndexOutofBoundsException-数组越界异常" class="headerlink" title="2.ArrayIndexOutofBoundsException  数组越界异常"></a>2.ArrayIndexOutofBoundsException  数组越界异常</h3><h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><h2 id="二-集合"><a href="#二-集合" class="headerlink" title="二.集合"></a>二.集合</h2>
 	
+
 	
-	
-	
+
 </div>
+<!-- 
+<script>
+	(function(){
+		if('{{ page.password }}'){
+			if(sessionStorage.getItem(location.pathname) !== 'password'){
+				var password = prompt('请输入文章密码');
+				if (password === '{{ page.password }}'){
+					sessionStorage.setItem(location.pathname, password);
+				}else{
+					alert('密码错误！');
+					history.back();
+				}
+			}
+		}
+	})();
+</script> -->
+
 				
 				
 
@@ -406,6 +411,7 @@
 
 
 
+
                 
             </div>
 
@@ -414,7 +420,7 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2017/01/10/2017-面试/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/01/08/miniapp-demo-KuaiNiaoExpress/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -514,7 +520,7 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
+            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
         </ul>
     </li>
 	
@@ -557,12 +563,18 @@
 			</a>
 		</li>
 	
+		<li>
+			<a href="/signature" title="signature">
+				signature
+			</a>
+		</li>
+	
 
     <!-- Article Numebr  -->
     <li>
         <a href="/archives">
              文章总数
-             <span class="sidebar-badge">16</span>
+             <span class="sidebar-badge">23</span>
         </a>
     </li>
 </ul>
@@ -684,7 +696,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;让正确的事情持续发生——永远年轻，永远热泪盈眶</div>
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;开启单线程模式！</div>
 
 		<!-- Paradox Footer Right Section -->
 
@@ -870,7 +882,9 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 </script>
 
+
 <!-- MathJax Load-->
+
 
             </main>
         </div>

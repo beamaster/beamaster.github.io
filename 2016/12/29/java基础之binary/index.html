@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        java基础之数据类型 | 让正确的事情持续发生——永远年轻，永远热泪盈眶
+        java基础之数据类型 | 开启单线程模式！
     </title>
 
     <!-- Favicons -->
@@ -35,23 +35,14 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta name="apple-mobile-web-app-title" content="开启单线程模式！">
 
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://beamaster.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="java基础之数据类型 | 让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta property="og:title" content="java基础之数据类型 | 开启单线程模式！">
     <meta property="og:description" content="Steam&#39;s Blog">
-    <!-- <script>
-    (function(){
-      if('{{ page.password }}'){
-        if (prompt('请输入文章密码','') !== '{{ page.password }}'){
-          alert('密码错误！');
-          history.back();
-        }
-      }
-    })();
-    </script> -->
+
 
      <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -177,9 +168,6 @@
 		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
 		}
 	</script>
-
-
-  <!-- 文章加密 设置-->
 
     <!-- Custom Head -->
     
@@ -350,7 +338,7 @@
     </a>
 
     <!-- Share QQ -->
-    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=让正确的事情持续发生——永远年轻，永远热泪盈眶&title=java基础之数据类型&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2016/12/29/java基础之binary/index.html" target="_blank">
+    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=开启单线程模式！&title=java基础之数据类型&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2016/12/29/java基础之binary/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 QQ
         </li>
@@ -370,10 +358,10 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<h1 id="Java基础之数据类型"><a href="#Java基础之数据类型" class="headerlink" title="Java基础之数据类型"></a>Java基础之数据类型</h1><h2 id="其他进制to十进制"><a href="#其他进制to十进制" class="headerlink" title="其他进制to十进制"></a>其他进制to十进制</h2><p>看图<br><img src="java基础之binary/images/other-decimal.png" alt="其他进制转十进制"></p>
-<h2 id="十进制转to其他进制"><a href="#十进制转to其他进制" class="headerlink" title="十进制转to其他进制"></a>十进制转to其他进制</h2><p>看图<br><img src="java基础之binary/images/decimal-other.png" alt="十进制转其他进制"></p>
+		<h1 id="Java基础之数据类型"><a href="#Java基础之数据类型" class="headerlink" title="Java基础之数据类型"></a>Java基础之数据类型</h1><h2 id="其他进制to十进制"><a href="#其他进制to十进制" class="headerlink" title="其他进制to十进制"></a>其他进制to十进制</h2><p>看图<br><img src="/2016/12/29/java基础之binary/images/other-decimal.png" alt="其他进制转十进制"></p>
+<h2 id="十进制转to其他进制"><a href="#十进制转to其他进制" class="headerlink" title="十进制转to其他进制"></a>十进制转to其他进制</h2><p>看图<br><img src="/2016/12/29/java基础之binary/images/decimal-other.png" alt="十进制转其他进制"></p>
 <h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * java数据类型byte,short,char在运算过程中，会默认转为int类型再去计算</div><div class="line"> *   Java中涉及byte、short和char类型的运</div><div class="line"> *   算操作首先会把这些值转换为int类型，然</div><div class="line"> *   后对int类型值进行运算，最后得到int类</div><div class="line"> *   型的结果。因此，如果把两个byte类型值</div><div class="line"> *   相加，最后会得到一个int类型的结果。如</div><div class="line"> *   果需要得到byte类型结果，必须将这个int</div><div class="line"> *   类型的结果显式转换为byte类型。</div><div class="line"> * 注意精度丢失问题</div><div class="line"> * 变量运算，先考虑类型</div><div class="line"> * 常量运算，先运算，再考虑运算的结果是否在数据类型范围之内</div><div class="line"> * byte的范围[-128,127]</div><div class="line"> * 1个byte占8位</div><div class="line"> * 范围：[01111111,10000000]</div><div class="line"> */</div><div class="line"><span class="keyword">byte</span> b1 = <span class="number">3</span>, b2 = <span class="number">4</span>, b;</div><div class="line">b = b1 + b2;<span class="comment">//&lt;变量运算&gt;有问题,精度丢失,编译失败</span></div><div class="line">b = <span class="number">3</span> + <span class="number">4</span>;<span class="comment">//常量运算</span></div></pre></td></tr></table></figure>
-<p><img src="java基础之binary/images/面试题.png" alt="面试题"></p>
+<p><img src="/2016/12/29/java基础之binary/images/面试题.png" alt="面试题"></p>
 <h3 id="为什么Java-byte-类型的取值范围是-128～127"><a href="#为什么Java-byte-类型的取值范围是-128～127" class="headerlink" title="为什么Java byte 类型的取值范围是-128～127"></a>为什么Java byte 类型的取值范围是-128～127</h3><h4 id="概念：负数的补码是该-数-绝-对-值-的-原-码-按-位-取-反-然-后-对-整个数-加-1"><a href="#概念：负数的补码是该-数-绝-对-值-的-原-码-按-位-取-反-然-后-对-整个数-加-1" class="headerlink" title="概念：负数的补码是该 数 绝 对 值 的 原 码 按 位 取 反 ,然 后 对 整个数 加 1"></a>概念：负数的补码是该 数 绝 对 值 的 原 码 按 位 取 反 ,然 后 对 整个数 加 1</h4><p>步骤：</p>
 <ul>
 <li><p>1.确定byte是1个字节，也就是8位</p>
@@ -403,10 +391,27 @@
 <p>用补码来表示数,0的补码是唯一的,都为<code>00000000</code>。(而在原码 ,反码表示中 ,+0和-0的表示是不唯一的,可参见相应的书籍)。而且可以用 <code>111111</code> 表示 -1的 补码(这也是补码与原码和反码的区别)。</p>
 
 	
+
 	
-	
-	
+
 </div>
+<!-- 
+<script>
+	(function(){
+		if('{{ page.password }}'){
+			if(sessionStorage.getItem(location.pathname) !== 'password'){
+				var password = prompt('请输入文章密码');
+				if (password === '{{ page.password }}'){
+					sessionStorage.setItem(location.pathname, password);
+				}else{
+					alert('密码错误！');
+					history.back();
+				}
+			}
+		}
+	})();
+</script> -->
+
 				
 				
 
@@ -434,6 +439,7 @@
             data-title="java基础之数据类型"></div>
     <!-- 多说评论框 end -->
 </div>
+
 
 
 
@@ -545,7 +551,7 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
+            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
         </ul>
     </li>
 	
@@ -588,12 +594,18 @@
 			</a>
 		</li>
 	
+		<li>
+			<a href="/signature" title="signature">
+				signature
+			</a>
+		</li>
+	
 
     <!-- Article Numebr  -->
     <li>
         <a href="/archives">
              文章总数
-             <span class="sidebar-badge">16</span>
+             <span class="sidebar-badge">23</span>
         </a>
     </li>
 </ul>
@@ -715,7 +727,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;让正确的事情持续发生——永远年轻，永远热泪盈眶</div>
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;开启单线程模式！</div>
 
 		<!-- Paradox Footer Right Section -->
 
@@ -901,7 +913,9 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 </script>
 
+
 <!-- MathJax Load-->
+
 
             </main>
         </div>

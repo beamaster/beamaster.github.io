@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        重启博客 | 让正确的事情持续发生——永远年轻，永远热泪盈眶
+        重启博客 | 开启单线程模式！
     </title>
 
     <!-- Favicons -->
@@ -35,23 +35,14 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta name="apple-mobile-web-app-title" content="开启单线程模式！">
 
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://beamaster.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="重启博客 | 让正确的事情持续发生——永远年轻，永远热泪盈眶">
+    <meta property="og:title" content="重启博客 | 开启单线程模式！">
     <meta property="og:description" content="Steam&#39;s Blog">
-    <!-- <script>
-    (function(){
-      if('{{ page.password }}'){
-        if (prompt('请输入文章密码','') !== '{{ page.password }}'){
-          alert('密码错误！');
-          history.back();
-        }
-      }
-    })();
-    </script> -->
+
 
      <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -177,9 +168,6 @@
 		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
 		}
 	</script>
-
-
-  <!-- 文章加密 设置-->
 
     <!-- Custom Head -->
     
@@ -350,7 +338,7 @@
     </a>
 
     <!-- Share QQ -->
-    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=让正确的事情持续发生——永远年轻，永远热泪盈眶&title=重启博客&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2016/12/28/重启博客/index.html" target="_blank">
+    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=开启单线程模式！&title=重启博客&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2016/12/28/重启博客/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 QQ
         </li>
@@ -376,10 +364,27 @@
 <p>感谢作者分享的<a href="https://material.vss.im/" target="_blank" rel="external">主题</a>，感谢<a href="https://login926.top" target="_blank" rel="external">小伙伴login926</a>的耐心解答，给我解决了不少bug和难题!</p>
 <h3 id="技术——异常总结"><a href="#技术——异常总结" class="headerlink" title="技术——异常总结"></a>技术——异常总结</h3><h3 id="闲暇——读书发呆思考美食"><a href="#闲暇——读书发呆思考美食" class="headerlink" title="闲暇——读书发呆思考美食"></a>闲暇——读书发呆思考美食</h3>
 	
+
 	
-	
-	
+
 </div>
+<!-- 
+<script>
+	(function(){
+		if('{{ page.password }}'){
+			if(sessionStorage.getItem(location.pathname) !== 'password'){
+				var password = prompt('请输入文章密码');
+				if (password === '{{ page.password }}'){
+					sessionStorage.setItem(location.pathname, password);
+				}else{
+					alert('密码错误！');
+					history.back();
+				}
+			}
+		}
+	})();
+</script> -->
+
 				
 				
 
@@ -407,6 +412,7 @@
             data-title="重启博客"></div>
     <!-- 多说评论框 end -->
 </div>
+
 
 
 
@@ -518,7 +524,7 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
+            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
         </ul>
     </li>
 	
@@ -561,12 +567,18 @@
 			</a>
 		</li>
 	
+		<li>
+			<a href="/signature" title="signature">
+				signature
+			</a>
+		</li>
+	
 
     <!-- Article Numebr  -->
     <li>
         <a href="/archives">
              文章总数
-             <span class="sidebar-badge">16</span>
+             <span class="sidebar-badge">23</span>
         </a>
     </li>
 </ul>
@@ -688,7 +700,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;让正确的事情持续发生——永远年轻，永远热泪盈眶</div>
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;开启单线程模式！</div>
 
 		<!-- Paradox Footer Right Section -->
 
@@ -874,7 +886,9 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 </script>
 
+
 <!-- MathJax Load-->
+
 
             </main>
         </div>

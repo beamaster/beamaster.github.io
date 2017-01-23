@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Title -->
+    
+    <title>
+        beautylife | 开启单线程模式！
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & INfo -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Steam">
+    <meta name="description" content="Steam&#39;s Blog">
+    <meta name="keywords" content="null">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="开启单线程模式！">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://beamaster.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="beautylife | 开启单线程模式！">
+    <meta property="og:description" content="Steam&#39;s Blog">
+
+
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+	body, html{
+		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	}
+	
+    a{
+        color: #00838F
+    }
+    
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important
+    }
+    
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: #0097A7 !important
+    }
+    
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: #0097A7 !important
+    }
+    
+    .toTop{
+        background: #757575 !important
+    }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: #757575;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: #757575;
+	}
+
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: #757575;
+	}
+	
+	.post-toc a:hover{
+		color: #00838F;
+		text-decoration: underline;
+	}
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+	<script src="/js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="/css/highlight/solarized-white.css">
+
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<link rel="stylesheet" href="/css/uc.css">');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+
+    <!-- Custom Head -->
+    
+</head>
+
+	
+	
+
+    <body id="scheme-Paradox">
+
+		
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			
+			
+            <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+				
+                <!-- Top Anchor -->
+                <div id="top"></div>
+				
+				
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+				
+				
+                <!-- Post TOC -->
+
+    
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#周有光：最美好的东西，最美好的事情｜逝者"><span class="post-toc-number">1.</span> <span class="post-toc-text">周有光：最美好的东西，最美好的事情｜逝者</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#我只比你大100岁哩"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">我只比你大100岁哩</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#偶然的事情，我不研究"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">偶然的事情，我不研究</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#我觉得人生最有意义的就是学习知识"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">我觉得人生最有意义的就是学习知识</span></a></li></ol></li></ol>
+		
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
+	
+		
+			<!-- Random Thumbnail -->
+			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+				<script>
+    
+    var randomNum;
+    randomNum = Math.floor(Math.random() * 30 + 1);
+    
+    $(".post_thumbnail-random").css('background-image', 'url(' + '/img/random/' + randomNum + '.png' + ')');
+    
+</script>
+
+		
+	
+        <p class="article-headline-p">
+            beautylife
+        </p>
+    </div>
+
+	
+
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Steam</strong>
+        <span>1月 15, 2017</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+
+    <!-- Qrcode -->
+    
+
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+
+    
+
+    
+    <!-- Busuanzi Views -->
+    <a class="post_share-link" href="#">
+        <li class="mdl-menu__item">
+            <span id="busuanzi_container_page_pv">
+                <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+            </span>
+        </li>
+    </a>
+    
+
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=beautylife&url=http://beamaster.github.io//2017/01/15/beautylife/index.html&via=Steam" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://beamaster.github.io//2017/01/15/beautylife/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=beautylife&url=http://beamaster.github.io//2017/01/15/beautylife/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+
+    <!-- Share LinkedIn -->
+    <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://beamaster.github.io//2017/01/15/beautylife/index.html&title=beautylife" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 LinkedIn
+        </li>
+    </a>
+
+    <!-- Share QQ -->
+    <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=开启单线程模式！&title=beautylife&summary=Steam&#39;s Blog&pics=http://beamaster.github.io/img/favicon.png&url=http://beamaster.github.io/2017/01/15/beautylife/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 QQ
+        </li>
+    </a>
+
+    <!-- Share Telegram -->
+    <a class="post_share-link" href="https://telegram.me/share/url?url=http://beamaster.github.io/2017/01/15/beautylife/index.html&text=beautylife" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Telegram
+        </li>
+    </a>
+</ul>
+
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<blockquote>
+<p>转自 [人物]公众号2017-01-14期</p>
+</blockquote>
+<h1 id="周有光：最美好的东西，最美好的事情｜逝者"><a href="#周有光：最美好的东西，最美好的事情｜逝者" class="headerlink" title="周有光：最美好的东西，最美好的事情｜逝者"></a>周有光：最美好的东西，最美好的事情｜逝者</h1><p><code>原创 2017-01-14 包丽敏 人物</code></p>
+<blockquote>
+<p>「汉语拼音之父」周有光今日去世，享年112岁。<br>一个世纪的历史浩荡，人生汹涌，最后平静地流汇到北京朝内大街后拐棒胡同一幢灰色的老楼里。<br>本文首发于2013年5月号《人物》。</p>
+</blockquote>
+<p><img src="/2017/01/15/beautylife/zyg1.jpg" alt="周有光先生"></p>
+<p><code>文｜包丽敏</code><br><code>编辑｜张捷</code><br><code>摄影｜周裕隆</code></p>
+<h2 id="我只比你大100岁哩"><a href="#我只比你大100岁哩" class="headerlink" title="我只比你大100岁哩"></a>我只比你大100岁哩</h2><p>当人生进入第108个年头，照顾了周有光先生16年的保姆说，这些年他「变得越来越慢」。的确，当他转身从窗台或书架上拿一本书，或者伸手从书桌拿起一件物什，或者因为听不清将手举起来放到耳朵后边时，一切都有点像是电影里的慢镜头。</p>
+<p>岁月从这位著名语言文字学家身上获取了越来越多的战利品：尽管他最早的记忆还能追溯到5岁前后祖母教他念唐诗，但记忆力会突然「像电流一样断掉」。他早年能流畅使用的法文和日文，现在读不了了。有些字他想不起怎么写，有些说法也已记不清，甚至人生中一些事情他全然忘了，直到看到有些关联物或有人提起，才恍然记起。</p>
+<p>他已经无法独自走路了。即使是在他不到120平方米大的家里，从小书房到卫生间，到餐厅，到起居室看电视，短短的距离，他也需要保姆的帮助。他将两手扶住保姆的两只胳臂，保姆往后退，而他则迈着细碎的步子往前挪。</p>
+<p>他终日待在朝北的小书房里，坐在一扇小窗户下，有访客来，他一一接待，讲到激动和酣畅处，忍不住要用指关节敲击桌子，或者哈哈大笑得像个孩子。没有访客来，他就埋头在一个失去了声音的世界里。</p>
+<p>好几年里他都不再回卧室的床上睡觉，无论午睡还是过夜，都在一张沙发上屈腿度过。「床太高了，懒得动了。」他说。</p>
+<p>但有些东西却是岁月没能夺走的。他还剩几颗牙，像战斗到最后的士兵，他始终依靠它们进食，而不是假牙。而更顽强的，或许是他对外界新鲜事物的好奇和跟进。</p>
+<p>他每天都要固定阅读5种以上报刊，《参考消息》是必看的，因为「里面还是有材料」；英文的《中国日报》也几乎每天都要看，因为要知道哪些中文说法跟英文说法对应。他定期读友人从海外寄来的《纽约时报》和《时代》周刊，以及各种各样的图书。有些时新的书，在国内版本面市之前，他早已经读过了。「有的时候一天看一本书。我看书快得很，常常一本书里面我一下子能找到我要看的东西。」他一边读书，一边用红笔在书上勾勾划划，做满记号。</p>
+<p>电影《阿凡达》热的时候，他想要去看。北京5号线地铁开通不久，他就坐着轮椅亲自走了一遍。报上说星巴克火，他要坐上轮椅让儿子推着到王府井去尝一尝。他说5号线太方便了，等于从儿子家门口直接到他自己家门口；星巴克很不错，经营得科学。</p>
+<p>他104岁的时候，跟人家大谈一种叫推特<code>Twitter</code>的「新花样」，还对手机大加赞叹：「手机几乎是万能的，可以看电视，可以看新闻，可以看书，可以谈话并看到对方的脸。手机将人融合在一起，集合信息化的大成，将来还会有大的变化。」</p>
+<p>即使腰背已经弯曲，再无法挺直，他仍然有一点雄心：「假如有人请我去演讲，我讲3个钟头不会累的。」确实，他快满100岁的时候，还在中国现代文学馆作了一场为时一个多小时的讲座，关于比较文字学，只带了提纲，讲稿全在肚里，讲完还现场答疑一个半小时。</p>
+<p>102岁那年，他在亲友陪同下到北京郊区泡温泉，对一个2岁的婴儿说：「我只比你大100岁哩。」</p>
+<h2 id="偶然的事情，我不研究"><a href="#偶然的事情，我不研究" class="headerlink" title="偶然的事情，我不研究"></a>偶然的事情，我不研究</h2><p>周有光开玩笑说他从80岁以后开始重新计算年龄，81岁算1岁。某种意义上，他人生一扇全新的门也正是在那之后不久打开的。那是1989年他83岁离休。在此之前，他是术业有专攻的语言文字学家；在此之后，他成了一个文化学者，研究世界历史和文化发展的规律，以耄耋之年不时出现在公众视野中，就一些公共话题发表意见。</p>
+<p>大多数人对他在语言文字学专业领域的成就不甚了了，虽然有数以亿计的人正在享受着他的工作带来的便捷。他是汉语拼音方案的主要制定者；他创建了现代汉字学；他研究比较文字学，找寻汉字在人类文字史上的地位；他还研究中文信息处理和无编码输入法，推动中国人加快跨入中文信息处理的新时代。</p>
+<p>但相比较而言，文化学者周有光的公开言论，比语言文字学家周有光引起了更多的共鸣。他谈论所谓「中国模式」，说没有「奇迹」，只有常规；他引用李慎之的观点，赞同回归「五四」；他批评中国的教育现状，直言为什么中国出不了大师⋯⋯2011年，105岁时，他还在以敢言犀利而著名的《炎黄春秋》杂志上发表文章，从「阿拉伯之春」看政治的全球化，谈论为什么北约要轰炸利比亚，因为联合国有一个「保护责任」新理念的决议，决议「确认当独裁者屠戮本国民众时，世界大国有权利和义务介入」。他谈论中国的「中产阶级」，「改革开放，建设小康，让一部分人先富起来。这一部分人应当是谁？应当是现代社会的创新动力，就是中产阶级。可是迎新时候，掀起盖头，一看不是中产阶级，而是新兴权贵。」他写道。</p>
+<p>中国社科院近代史所研究员刘志琴说，中国的学界出现了一个「新」现象：一批老知识分子，而不是年轻一辈的知识分子撑起了新启蒙的旗帜，周有光就是其中一位。</p>
+<p>周有光调侃自己是「两头真」：年轻时「天真盲从」，年老时「探索真理」。</p>
+<p>「探索真理」的过程是离休后真正开始的。因为年龄已经不允许他经常到图书馆查阅资料，他不得不放弃语言文字的学术研究，开始了被他描述为「随便看书」的新一段生涯。这一看，他突然发现了「一个知识的海洋」，而「我就是一个文盲，我得赶紧给自己扫盲」。</p>
+<p>「这样子眼光就放大了。我原来是越钻越深，越钻越小，井底看天，天就是月亮那么大嘛。」老头儿坐在他的小书桌边，淡定地说。皱纹像蛛网一样织满了皮肤表层，眉毛几乎已经掉光，露出两弯光滑圆润的眉骨。</p>
+<p>某种程度上，绝大部分时间，他的世界小到只有这眼前的9平方米和这张长90厘米、宽55厘米掉了漆的老旧书桌。白天的时间，他基本就坐在这里，读书，看报，思考，写作。</p>
+<p>但他的世界又出奇地大。百岁之后，他的耳朵越发不灵，除了有访客到来，他会特意戴上助听器，其余时间，他往往沉浸在一个几乎无声的世界里。但是两只做了人工晶体手术的眼睛，却让他无需借助老花镜就能够阅读打印出来的五号字，让他能够自由地在书本的世界里追寻世界历史和文化发展的规律。</p>
+<p>他的头脑中似乎始终揣着一个坐标系，纵的那一条，是上下五千年的世界文明发展的历程，而横的那一条，是世界各国的发展现状。</p>
+<p>周有光这样描述人类文化发展的步骤：在经济方面，从农业化到工业化到信息化；政治方面，从神权政治到君权政治到民权政治，简单说也就是从专制到民主；思维方面，从神学思维到玄学思维到科学思维，神学依靠「天命」，玄学重视「推理」，而科学讲「实证」。</p>
+<p>「人类历史就像是一条田径跑道，世界各国都在这条跑道上竞走。有快有慢，有先有后，后来可以居上，出轨终须回归。」他时常坐在他的小书桌旁，在一堆书籍的包围中，向不同的访客谈起这样的观点，「道路只有一条，没有第二第三道路」，而竞走的目标，则是科学和民主。</p>
+<p>来来往往的访客们总想从这位世纪老人那里寻求一些智慧，难免问问他怎么看这个国家的走向。他总是充满乐观，「现在是全球化时代，中国是世界的一员，整个历史前进，中国不可能不前进的，不过是快一点慢一点的问题，所以我从这个角度来看就不发愁了。」他笑眯眯地笃定地说。</p>
+<p>著名学者资中筠有一次来拜访，说起她的悲观。「我说你是太心急了。我说我不心急。她说你为什么不心急，我说中国有5000年的文化，500年也是短时间嘛，你等300年一定进步。」周有光说着哈哈大笑起来，边笑边习惯性地用手掩一下嘴，仿佛怕失了礼仪，接着补充说：「一方面是笑话，一方面也是无可奈何的事情嘛。」</p>
+<p>「那么您觉得中国在前进的过程中有没有可能再发生动乱？」我问。</p>
+<p>老先生想了一想，回答说：「这是偶然的事情，我不研究。就像一条河一样，河的上面波浪变化太快，我又没有资料，我不研究，我研究河的下面的潜流，潜流是有规则的，就是历史的轨道。研究历史的轨道非常有趣味，也很重要，所以我是乐观的。」　　</p>
+<h2 id="我觉得人生最有意义的就是学习知识"><a href="#我觉得人生最有意义的就是学习知识" class="headerlink" title="我觉得人生最有意义的就是学习知识"></a>我觉得人生最有意义的就是学习知识</h2><p>周有光1906年1月出生时，清朝的皇帝还坐着龙廷，他看着家里面从原来点油灯变成点电灯，然后又跨入电脑时代，看着手机怎样「让万里之外的人跑到耳朵旁边」。他的一生几乎就伴随着这个古老国家向现代化转型的一个世纪的阵痛。</p>
+<p>他常说自己一生经历三次倾家荡产。太平天国起义攻入他的出生地江苏常州，曾祖父投水而死，家里破产；10岁时迁居苏州，抗战期间逃难到四川，将苏州老家托付他人照管，结果等抗战胜利回家，发现家里已经住着完全不认识的人；「文革」期间，下放宁夏「五七干校」，等林彪死后回京，发现家里面「连一张纸片片都没有了」。</p>
+<p>最悲苦的岁月要数抗战时在重庆。日机轰炸的日子里，天天面对死亡。一次，他坐滑竿下坡到码头，一个炮弹飞来，旁边的人都炸死了，而他自己「吓得不知道害怕了」。一家人的住处三次被炸光。有一处，他们尝试从废墟挖下去看看还能抢救出什么，结果只挖出一双橡皮鞋还算完好。他的5岁小女儿，仅仅因为得了盲肠炎，在缺医少药的战时，却只能眼睁睁看着她死去。回忆起这段往事的时候，他脸上少有地现出痛苦，将两弯眉骨紧紧地锁起来。</p>
+<p>最开始他研究的其实是经济学，并被一家银行派驻到美国华尔街工作。上海解放后，一家人高高兴兴买了船票回国。他以为新中国最重要的是经济建设，没想到他的所学并不被需要。如果不是在1955年「被改行」调入文字改革委员会去搞语言文字研究，他很可能已经像他那些经济学家同行一样，不由分说被打成「右派」，甚至自杀。</p>
+<p>他从未想过自杀。某种程度上，周有光得以从历次政治运动中「幸存」下来，部分是因为他刻意保持与政治的距离。他钻进学问里，坚持不从政。</p>
+<p>「人家说我有许多机会做官，国民党里许多重要人物都是我的朋友，共产党里，我抗战时期就认识周恩来，每个月都在一起讨论问题，熟得很。国民党的时候我不参加国民党，共产党时候我不参加共产党，我要有独立的人格。」</p>
+<p>然而当巨大的时代思潮汹涌而来时，他也曾是无数被裹挟的人之一。1933年他和新婚的妻子张允和利用老丈人给的嫁妆到日本去留学时，原本想的是要去师从社会主义经济学家河上肇，结果没学成。「‘左倾幼稚病’嘛。」现在他这样调侃，然后哈哈地笑。</p>
+<p>「人啊是会糊涂的，我的青年时候也是很糊涂的。老实讲吧，人家问我你是什么时候清醒过来的？我想是‘文化大革命’的时候。要清醒不是容易的，要重新思考。」</p>
+<p>当岁月一点点征服他的身体，腿脚不再灵便，头发日渐稀疏，牙齿慢慢松动，听力渐渐失去，周有光始终没有放弃「思考」这种宝贵的能力。「上帝给我们一个大脑，不是用来吃饭的，是用来思考问题的。」他这样说。</p>
+<p>你如果想请教一下这个虚岁108的老头儿，人生的意义是什么？他会回答你：「我觉得人生最有意义的就是学习知识。追求知识，享受知识，创造知识，就是人生的愉快。」如果你再问他，那人生最美好的是什么？他会说，「知识是最美好的东西，求知是最美好的事情。」</p>
+<p>他信仰科学。「什么叫科学？科学就是规律。自然科学是自然规律，社会科学是社会规律。」他信仰人类的发展规律，相信人类必然就得这么发展，你要是走错了路，非得走回来不可。「中华民族就曾经走错了路。」他说，「改革开放是一只脚走了回来，另一只脚还没走回来，早晚还得走回来。」</p>
+<p>他以科学的方式对待自己的生活，比如，基本不怎么喝酒，不抽烟，因为此前患有青光眼常年坚持滴眼药，一天不落，还读了不少讲怎样锻炼脑子的书。</p>
+<p>甚至可以说，某种程度上，他以科学的理性来帮助自己面对死亡。</p>
+<p>当我问起他如何思考生死，他是这样回答的：「人都喜欢活，不喜欢死，这是常态。可是你假如研究过进化论，就知道这是自然规律，你心里就舒服了。这是自然规律，谁也挡不过的。」</p>
+<p>妻子张允和是著名的「合肥四姐妹」中的老二，93岁那年去世，给了98岁的周有光「晴天霹雳」般的打击。「我们结婚70年，从没想过会有一天二人之中少了一个」，他「不知所措，终日苦思，什么事情也懒得动」。儿子周晓平说，平时感情不外露的爸爸，花了半年时间才恢复过来。他自己解释说：「我走出了这次打击和阴影，是因为想起有一位哲学家说过，个体的死亡是群体发展的必然条件。人如果都不死，人类就不能进化。多么残酷的进化论！但是，我只有服从自然规律！」</p>
+<p>「原来，人生就是一朵浪花。」他后来在一篇文章里写道。</p>
+<p>现在，在他那只有几十平方米的简陋的家里，年轻的、年老的，黑白的、彩色的张家二姐，从有大有小的一个个相框里微笑着陪伴着他。</p>
+<p>去年年底，由他口述的一本《百岁忆往》出版，回顾了一个世纪的经历。他人采写形成初稿后，暑天里周有光三次删改，竟删去一多半的文字，成了薄薄的一本，并且全书不配一幅图片，就像删去了繁华枝叶只剩枝干的一棵极简的树。</p>
+<p>他的人生最后平静地流汇到北京朝内大街后拐棒胡同一幢灰色的老楼里。</p>
+<p>从一个低矮的门洞走进去，老旧简陋的水泥楼梯，爬上三楼，左手进门，地板都没有，只是铺着简陋的地板革。无论外面阴晴，瘦瘦的周有光先生都静静地坐在窗户旁的小书桌边。写写划划，像时代激流之下紧紧扒住河床的一枚活化石。</p>
+<p><img src="/2017/01/15/beautylife/zyg2.jpg" alt="周有光先生"></p>
+<blockquote>
+<p>本文转载自微信公众号：人物，如有冒犯，请留言联系，谢谢！</p>
+</blockquote>
+<p><img src="/2017/01/15/beautylife/gzh_renwu.png" alt="人物公众号"></p>
+
+	
+
+	
+
+</div>
+<!-- 
+<script>
+	(function(){
+		if('{{ page.password }}'){
+			if(sessionStorage.getItem(location.pathname) !== 'password'){
+				var password = prompt('请输入文章密码');
+				if (password === '{{ page.password }}'){
+					sessionStorage.setItem(location.pathname, password);
+				}else{
+					alert('密码错误！');
+					history.back();
+				}
+			}
+		}
+	})();
+</script> -->
+
+				
+				
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+            data-thread-key="2017/01/15/beautylife/" 
+            data-url="http://beamaster.github.io/2017/01/15/beautylife/"
+            data-title="beautylife"></div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+        <a href="/2017/01/16/blog-encrypt/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            后一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/01/15/dig-Command/" id="post_nav-older" class="next-content">
+            前一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
+
+				
+				
+					<!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay "></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+	<div id="sidebar-main">
+	    <!-- Sidebar Header -->
+		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Steam's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        steamshi@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+		<!-- Sidebar Navigation  -->
+		<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+			
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+<!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+-->
+
+	
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a>
+        </ul>
+    </li>
+	
+    <!-- Categories  -->
+<!--
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">view_list</i>
+             分类
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            
+        </ul>
+    </li>
+-->
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+	
+		<li>
+			<a href="/about" title="about">
+				about
+			</a>
+		</li>
+	
+		<li>
+			<a href="/friends" title="friends">
+				friends
+			</a>
+		</li>
+	
+		<li>
+			<a href="/favorite" title="favorite">
+				favorite
+			</a>
+		</li>
+	
+		<li>
+			<a href="/signature" title="signature">
+				signature
+			</a>
+		</li>
+	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+             文章总数
+             <span class="sidebar-badge">23</span>
+        </a>
+    </li>
+</ul>
+
+		<!-- Sidebar Divider -->
+		<div class="sidebar-divider"></div>
+
+		<!-- Sidebar Footer -->
+		<!-- 
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持。 :) 
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		主题 - Material
+		<span class="sidebar-badge badge-circle">i</span>
+	</div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		sidebar.help
+		<span class="mdl-button__ripple-container">
+			<span class="mdl-ripple"></span>
+		</span>
+	</div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+	</div>
+    
+    <!-- Sidebar Sponsor -->
+    
+
+
+</aside>
+
+				
+				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+				
+				
+				<!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+	
+	
+		<!-- Paradox Footer Left Section -->
+		<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+    
+
+    <!-- Facebook -->
+    
+    
+
+    <!-- Google + -->
+    
+    
+
+    <!-- Weibo -->
+    
+    <a href="http://weibo.com/steamQ/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+        <span class="visuallyhidden">Weibo</span>
+    </button></a>
+    
+
+    <!-- Instagram -->
+    
+    
+
+    <!-- Tumblr -->
+    
+    
+
+    <!-- Github -->
+    
+    <a href="https://github.com/beamaster" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+        <span class="visuallyhidden">Github</span>
+    </button></a>
+    
+
+    <!-- LinkedIn -->
+    
+    
+</div>
+
+
+		<!--Copyright-->
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;开启单线程模式！</div>
+
+		<!-- Paradox Footer Right Section -->
+
+		<!-- 
+		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+		It will not impact the appearance and can give developers a lot of support :)
+
+		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+		它不会影响美观并可以给开发者很大的支持。 :) 
+		-->
+
+		<div class="mdl-mini-footer--right-section">
+			<div>
+				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+			</div>
+		</div>
+	
+    
+</footer>
+                
+				<!-- Import File -->
+<script src="/js/highlight.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    <!-- 多说公共 js 代码 start -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"forsigner"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'https://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共 js 代码 end -->
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+	<script>
+	var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length <= 0) {
+                    return;
+                }
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ data_title;
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out characters
+                            var start = first_occur - 6;
+                            var end = first_occur + 6;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 10;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substr(start, end); 
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<em class=\"search-keyword\">"+keyword+"</em>");
+                            })
+                            str += "<p class=\"search-result\">" + match_content +"...</p>" +"</a>";
+                        }
+                    }
+                })
+                $resultContent.innerHTML = str;
+            })
+        }
+    })
+}
+</script>
+
+	<script>
+        var inputArea = document.querySelector("#search");
+        var getSearchFile = function(){
+            var path = "search.xml";
+            searchFunc(path, 'search', 'local-search-result');
+        }
+
+        inputArea.onfocus = function(){ getSearchFile() }
+	</script>
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>
+
+
+<!-- MathJax Load-->
+
+
+            </main>
+        </div>
+		
+    </body>
+		
+	
+</html>
